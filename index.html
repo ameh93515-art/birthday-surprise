@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)file:///C:/Users/hp/Downloads/birthday_surprise_website.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffe7f0">
+<title>For My Baby 🧸❤️</title>
+<style>
+:root{
+  --pink:#ff8fb3;--hot:#ff5e93;--pale:#fff0f5;--cream:#fffaf5;
+  --purple:#b7a2ff;--ink:#573448;--red:#ff4f6d;--gold:#ffd36e;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:ui-rounded,"Trebuchet MS",system-ui,-apple-system,sans-serif;color:var(--ink);background:linear-gradient(135deg,#fff6fa,#fff3e9 45%,#f7f1ff);min-height:100vh;overflow-x:hidden}
+button,input{font:inherit}
+button{cursor:pointer;border:0}
+.hidden{display:none!important}
+.screen{min-height:100vh;padding:28px 16px;display:flex;align-items:center;justify-content:center;position:relative}
+.card{width:min(760px,100%);padding:clamp(22px,5vw,44px);background:rgba(255,255,255,.86);border:2px solid rgba(255,143,179,.35);border-radius:30px;box-shadow:0 18px 55px rgba(191,100,138,.14);text-align:center;position:relative;z-index:1}
+.eyebrow{letter-spacing:.14em;text-transform:uppercase;font-size:.75rem;font-weight:800;color:#d65e8b}
+h1,h2,h3,p{margin-top:0}
+h1{font-size:clamp(2rem,7vw,3.6rem);line-height:1.08;margin-bottom:18px;color:#b63e70}
+h2{font-size:clamp(1.6rem,5vw,2.5rem);color:#b63e70;margin-bottom:14px}
+p{line-height:1.7}
+.small{font-size:.92rem;opacity:.8}
+.primary,.secondary,.option{border-radius:999px;padding:13px 21px;font-weight:800;transition:transform .18s,box-shadow .18s}
+.primary{background:linear-gradient(135deg,var(--hot),#ff9ec0);color:white;box-shadow:0 8px 18px #ff8fb34a}
+.secondary{background:#fff0f5;color:#b63e70;border:1px solid #ffc1d5}
+.primary:hover,.secondary:hover,.option:hover{transform:translateY(-2px)}
+input[type=password]{width:min(320px,100%);padding:14px 18px;border-radius:16px;border:2px solid #ffd0df;background:#fffafd;text-align:center;outline:none;margin:8px 0 14px;color:var(--ink);letter-spacing:.2em}
+input:focus{border-color:var(--hot)}
+#passwordError{min-height:28px;color:#d83259;font-weight:800}
+.floaties{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.floaty{position:absolute;bottom:-50px;animation:floatUp linear infinite;opacity:.6}
+@keyframes floatUp{to{transform:translateY(-115vh) rotate(35deg);opacity:0}}
+.photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:24px 0}
+.photo-slot{min-height:150px;border:2px dashed #f4a7c2;border-radius:20px;background:linear-gradient(135deg,#fff1f6,#f8f1ff);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;padding:12px;color:#b45b7e;font-weight:800;overflow:hidden}
+.photo-slot .photo-icon{font-size:2rem}
+.photo-slot img{width:100%;height:100%;max-height:280px;object-fit:cover;border-radius:14px}
+.photo-slot span{font-size:.85rem}
+.birthday-copy{white-space:pre-line;font-size:1.02rem}
+.gift-hero{font-size:6rem;display:inline-block;cursor:pointer;filter:drop-shadow(0 10px 6px #f7a2c0);animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-10px) rotate(3deg)}}
+@keyframes pop{0%{transform:scale(.2) rotate(-15deg);opacity:0}70%{transform:scale(1.08)}100%{transform:scale(1);opacity:1}}
+.pop{animation:pop .65s ease both}
+.confetti{position:fixed;top:-15px;width:9px;height:14px;z-index:99;pointer-events:none;animation:fall 2.2s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:.1}}
+/* MINIMAL ROMANTIC COUNTER */
+
+.counter-minimal {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px 12px;
+  margin: 35px auto;
+  padding: 15px 5px;
+  max-width: 550px;
+}
+
+.counter-minimal .counter-unit {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 5px 2px;
+  text-align: center;
+}
+
+.counter-minimal .counter-unit strong {
+  display: block;
+  font-size: clamp(1.5rem, 5vw, 2.4rem);
+  color: #c34c7b;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.counter-minimal .counter-unit span {
+  display: block;
+  margin-top: 7px;
+  font-size: 0.7rem;
+  color: #987080;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+@media (max-width: 480px) {
+  .counter-minimal {
+    grid-template-columns: 1fr;
+  }
+}.quiz-top{display:flex;justify-content:space-between;gap:10px;font-size:.85rem;font-weight:900;color:#b44c79;margin-bottom:20px}
+.progress{height:8px;background:#ffe3ed;border-radius:99px;overflow:hidden;margin-bottom:25px}
+.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#ff6e9f,#b6a1ff);transition:width .3s}
+.question{font-size:clamp(1.35rem,4.5vw,2rem);font-weight:900;line-height:1.3;margin-bottom:24px}
+.options{display:grid;gap:12px}
+.option{width:100%;background:#fff7fa;color:#703b55;border:2px solid #ffd5e2;border-radius:18px;text-align:left;padding:16px 18px}
+.option.correct{background:#eafff1;border-color:#82dba0}
+.option.wrong{background:#fff0f1;border-color:#ff6379}
+.reaction{margin-top:20px;padding:20px;border-radius:20px;background:#fff0f5;font-weight:900;font-size:1.1rem;line-height:1.5}
+.reaction.wrong{background:#fff0f1;color:#bd2346;border:2px solid #ff8092}
+.reaction.correct{background:#fff0f8;color:#a22f68}
+.result-photo{margin:16px auto;max-width:260px}
+.result-photo .photo-slot{min-height:190px}
+/* CLEAR GLASS LOVE JAR */
+.giftbox-button {
+  font-size: 0;
+  width: 165px;
+  height: 195px;
+  margin: 35px auto;
+  display: block;
+  position: relative;
+  border: 2px solid #ffffff;
+  border-top: 5px solid #ffffff;
+  border-radius: 22px 22px 38px 38px;
+  background:
+    linear-gradient(90deg,
+      #ffffff85 0%,
+      #ffffff12 18%,
+      #ffffff08 75%,
+      #ffffff70 100%);
+  box-shadow:
+    inset 9px 0 12px #ffffff80,
+    inset -7px 0 12px #ffffff55,
+    0 8px 25px #b45b7e20;
+  animation: bob 3s infinite;
+  cursor: pointer;
+}
+
+.giftbox-button::before {
+  content: "";
+  position: absolute;
+  top: -17px;
+  left: 25px;
+  width: 110px;
+  height: 15px;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #ffffffcc, #fceef3aa, #ffffffcc);
+  box-shadow: 0 3px 8px #b45b7e20;
+}
+
+.giftbox-button::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 10px;
+  width: 5px;
+  height: 135px;
+  border-radius: 10px;
+  background: #ffffff85;
+  box-shadow: 135px 0 5px #ffffff55;
+}
+/* TINY LETTERS INSIDE THE JAR */
+.giftbox-button {
+  overflow: visible;
+}
+
+.giftbox-button {
+  background:
+    radial-gradient(ellipse at 25% 35%, #fff 0 3px, transparent 4px),
+    radial-gradient(ellipse at 65% 55%, #f6b6ca 0 7px, transparent 8px),
+    radial-gradient(ellipse at 40% 75%, #fff0f5 0 8px, transparent 9px),
+    linear-gradient(110deg, #ffffffa8, #f8c8dba8, #ffffff80);
+}
+.reason-card{margin:18px auto;padding:24px;border-radius:24px;background:linear-gradient(135deg,#fff0f6,#f3efff);border:2px solid #ffc3d8;max-width:560px;animation:pop .45s ease both}
+.reason-number{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:#c35c85;font-weight:900}
+.reason-text{font-size:1.2rem;font-weight:800;line-height:1.55}
+.letter-envelope{font-size:5rem;cursor:pointer;animation:bob 2s infinite}
+/* LOVE LETTER - VINTAGE STATIONERY */
+.letter {
+  position: relative;
+  max-width: 680px;
+  margin: 30px auto;
+  padding: clamp(25px, 6vw, 48px);
+  background:
+    repeating-linear-gradient(
+      transparent,
+      transparent 34px,
+      #d9c9b755 35px
+    ),
+    #fffdf5;
+  color: #624b46;
+  text-align: left;
+  border: 1px solid #e8d9c5;
+  border-radius: 4px;
+  box-shadow:
+    0 8px 25px #80604a20,
+    inset 0 0 35px #ead9c455;
+  white-space: pre-line;
+  line-height: 2;
+  font-family: Georgia, serif;
+  font-size: 16px;
+  transform: rotate(-0.5deg);
+}
+.wheel-wrap{width:min(340px,82vw);aspect-ratio:1;margin:24px auto;position:relative}
+.wheel{width:100%;height:100%;border-radius:50%;border:8px solid white;box-shadow:0 10px 30px #b45b7e30;position:relative;overflow:hidden;background:conic-gradient(#ff9fbd 0deg 72deg,#b8a7ff 72deg 144deg,#ffd879 144deg 216deg,#ffa8a0 216deg 288deg,#a8e4d0 288deg 360deg);transition:transform 4s cubic-bezier(.12,.75,.15,1)}
+.wheel-label{position:absolute;left:50%;top:50%;width:44%;text-align:center;font-size:clamp(.65rem,2.5vw,.85rem);font-weight:900;color:#55354a;transform-origin:0 0}
+.pointer{position:absolute;top:-10px;left:calc(50% - 17px);z-index:2;width:0;height:0;border-left:17px solid transparent;border-right:17px solid transparent;border-top:36px solid #c34476;filter:drop-shadow(0 3px 2px #0002)}
+.wheel-center{position:absolute;inset:calc(50% - 25px);width:50px;height:50px;border-radius:50%;background:#fff;border:5px solid #f7a1bf;z-index:1}
+.final-reveal{background:linear-gradient(135deg,#fff0f6,#f3edff);border-radius:24px;padding:25px;margin-top:20px;border:2px solid #ffc1d7}
+.final-reveal .big{font-size:clamp(2rem,8vw,4rem);font-weight:1000;color:#c13e75}
+footer{font-size:.75rem;opacity:.6;margin-top:24px}
+@media(max-width:500px){.counter-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.photo-slot{min-height:120px}.card{border-radius:24px}.screen{padding:16px 12px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+/* OUR MOVING MEMORY PHOTO STRIP */
+#memoryIntro {
+  overflow: hidden;
+}
+
+#memoryIntro .photo-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 15px;
+  width: max-content;
+  animation: memoryMove 18s linear infinite;
+  padding: 20px 10px;
+}
+
+#memoryIntro .photo-slot {
+  flex: 0 0 150px;
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 5px 18px #b45b7e30;
+}
+
+@keyframes memoryMove {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+/* BIRTHDAY SCRAPBOOK STYLE */
+
+.scrapbook {
+  max-width: 650px;
+  margin: 30px auto;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.scrapbook .birthday-copy {
+  background: #fffaf7;
+  color: #704b5a;
+  padding: 18px 20px;
+  border-radius: 12px;
+  line-height: 1.8;
+  text-align: center;
+  font-size: 16px;
+  box-shadow: 0 4px 15px #b45b7e18;
+  margin: 0;
+}
+
+.scrapbook-photo {
+  width: 155px;
+  height: 175px;
+  background: #fff;
+  padding: 10px 10px 28px;
+  box-shadow: 0 5px 18px #8c53622b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b17b8d;
+  font-size: 13px;
+  font-family: cursive;
+  border: 1px solid #f4e5e8;
+}
+
+.photo-one {
+  align-self: flex-start;
+  transform: rotate(-7deg);
+}
+
+.photo-two {
+  align-self: flex-end;
+  transform: rotate(6deg);
+}
+
+.photo-three {
+  align-self: flex-start;
+  transform: rotate(5deg);
+}
+
+.photo-four {
+  align-self: flex-end;
+  transform: rotate(-6deg);
+}
+/* LITTLE FOLDED LETTERS INSIDE THE JAR */
+.jar-note {
+  position: absolute;
+  display: block;
+  width: 42px;
+  height: 55px;
+  background: linear-gradient(145deg, #fffef9, #f8eee2);
+  border: 1px solid #e5d8c9;
+  border-radius: 3px;
+  box-shadow: 0 3px 7px #6f536033;
+}
+
+.jar-note::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 12px solid #eaded0;
+  border-right: 12px solid transparent;
+}
+
+.note-one {
+  left: 23px;
+  bottom: 25px;
+  transform: rotate(-18deg);
+}
+
+.note-two {
+  left: 57px;
+  bottom: 32px;
+  transform: rotate(12deg);
+}
+
+.note-three {
+  right: 18px;
+  bottom: 22px;
+  transform: rotate(25deg);
+}
+#reasonNumber,
+#reasonProgress {
+  display: none !important;
+}
+/* FOUR MEMORIES ON A FAIRY LIGHT STRING */
+#letterPhotos:not(.hidden) {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: start;
+  gap: 13px;
+  width: 100%;
+  max-width: 680px;
+  box-sizing: border-box;
+  margin: 45px auto 30px;
+  padding: 38px 5px 10px;
+  background:
+    radial-gradient(circle, #fff5bd 0 3px, #f6d77b66 4px, transparent 10px)
+      12.5% 20px / 25% 20px repeat-x;
+}
+
+/* THE HANGING STRING */
+#letterPhotos::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 3%;
+  width: 94%;
+  height: 25px;
+  border-top: 2px solid #b18b68;
+  border-radius: 50%;
+}
+
+/* POLAROID PHOTOS */
+#letterPhotos .photo-slot {
+  position: relative;
+  width: 100%;
+  height: 155px;
+  box-sizing: border-box;
+  padding: 10px 5px 20px;
+  background: #fffdf9;
+  border: 1px solid #eee2d9;
+  border-radius: 2px;
+  box-shadow: 0 5px 15px #80604a30;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+/* LITTLE WOODEN CLIPS */
+#letterPhotos .photo-slot::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: calc(50% - 5px);
+  width: 10px;
+  height: 23px;
+  background: linear-gradient(90deg, #a77b51, #e0bd8c, #a77b51);
+  border-radius: 2px;
+  box-shadow: 0 2px 3px #80604a40;
+}
+
+/* HANGING ANGLES */
+#letterPhotos .photo-slot:nth-child(odd) {
+  transform: rotate(-3deg);
+}
+
+#letterPhotos .photo-slot:nth-child(even) {
+  transform: rotate(3deg);
+}
+
+#letterPhotos .photo-slot .photo-icon {
+  font-size: 1.7rem;
+}
+
+#letterPhotos .photo-slot span {
+  font-family: Georgia, serif;
+  font-size: 10px;
+  color: #987b78;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  #letterPhotos:not(.hidden) {
+    gap: 8px;
+  }
+
+  #letterPhotos .photo-slot {
+    height: 125px;
+    padding: 7px 3px 15px;
+  }
+
+  #letterPhotos .photo-slot span {
+    font-size: 8px;
+  }
+}
+/* SCRAPBOOK PHOTOS AND VIDEOS */
+.scrapbook-photo {
+  width: 100%;
+  max-width: 320px;
+  height: 220px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.scrapbook-photo img,
+.scrapbook-photo video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+}
+/* SLOT 2 - ZOOM OUT PHOTO */
+.photo-two img {
+  object-fit: contain;
+  background: #fff;
+}
+
+/* SLOT 3 - VERTICAL PHOTO */
+.photo-three img {
+  object-fit: contain;
+  background: #fff;
+}
+
+/* SLOT 4 - VERTICAL VIDEO */
+.photo-four video {
+  object-fit: contain;
+  background: #000;
+}
+</style>
+</head>
+<body>
+
+<div class="floaties" id="floaties" aria-hidden="true"><span class="floaty" style="left: 83.8312%; animation-duration: 15.2085s; animation-delay: -14.0596s; font-size: 16.1017px;">♡</span><span class="floaty" style="left: 99.7064%; animation-duration: 16.6757s; animation-delay: -8.95839s; font-size: 31.9337px;">♥</span><span class="floaty" style="left: 4.44802%; animation-duration: 15.298s; animation-delay: -10.5653s; font-size: 19.1949px;">✧</span><span class="floaty" style="left: 85.2837%; animation-duration: 13.0403s; animation-delay: -13.1894s; font-size: 14.8981px;">✨</span><span class="floaty" style="left: 82.5179%; animation-duration: 11.7874s; animation-delay: -12.69s; font-size: 12.511px;">🩷</span><span class="floaty" style="left: 64.0109%; animation-duration: 12.083s; animation-delay: -10.6432s; font-size: 21.3868px;">♡</span><span class="floaty" style="left: 44.938%; animation-duration: 17.5985s; animation-delay: -6.5965s; font-size: 13.6466px;">♥</span><span class="floaty" style="left: 77.9481%; animation-duration: 16.7743s; animation-delay: -13.232s; font-size: 13.5188px;">✧</span><span class="floaty" style="left: 74.4691%; animation-duration: 17.3138s; animation-delay: -9.96004s; font-size: 18.1113px;">✨</span><span class="floaty" style="left: 8.79271%; animation-duration: 20.1713s; animation-delay: -1.84413s; font-size: 19.3133px;">🩷</span><span class="floaty" style="left: 70.0024%; animation-duration: 18.856s; animation-delay: -10.2031s; font-size: 31.2928px;">♡</span><span class="floaty" style="left: 13.9741%; animation-duration: 18.8815s; animation-delay: -14.2459s; font-size: 28.0019px;">♥</span><span class="floaty" style="left: 76.1792%; animation-duration: 18.9103s; animation-delay: -13.0669s; font-size: 30.7367px;">✧</span><span class="floaty" style="left: 70.4683%; animation-duration: 18.6361s; animation-delay: -11.9589s; font-size: 16.0303px;">✨</span><span class="floaty" style="left: 30.3477%; animation-duration: 13.6747s; animation-delay: -8.44486s; font-size: 25.4548px;">🩷</span><span class="floaty" style="left: 93.1844%; animation-duration: 15.7084s; animation-delay: -10.4407s; font-size: 17.1664px;">♡</span><span class="floaty" style="left: 41.1531%; animation-duration: 11.0489s; animation-delay: -6.87119s; font-size: 28.3131px;">♥</span><span class="floaty" style="left: 0.860745%; animation-duration: 9.06757s; animation-delay: -7.96224s; font-size: 18.2395px;">✧</span></div>
+
+<section class="screen" id="passwordScreen">
+  <div class="card pop">
+    <div class="eyebrow">A tiny secret world ✨</div>
+    <div style="font-size:3rem;margin:12px 0">🧸💗🐘</div>
+    <h1>Hello, birthday boy!</h1>
+<p>A little world made with lots of love, just for you. ❤️ <br>
+Enter the password to see what's waiting for you. ✨</p>
+    <form id="passwordForm">
+      <input id="passwordInput" type="password" inputmode="numeric" autocomplete="off" placeholder="Secret password" aria-label="Secret password" maxlength="12">
+      <br><button class="primary" type="submit">Unlock my surprise 💌</button>
+    </form>
+    <div id="passwordError" aria-live="polite"></div>
+    <footer> </footer>
+  </div>
+</section>
+
+<main id="mainSite" class="hidden">
+  <section class="screen" id="birthdayScreen">
+    <div class="card">
+<div id="memoryIntro">
+  <div class="eyebrow">For my favourite human </div>
+  <div class="eyebrow">A little trip down the memory lane</div>
+  <h1>Us, through the years❤️</h1>
+  
+
+ <div class="photo-grid">
+  <div class="photo-slot"><img src="photos/memory1.jpg" alt="Our memory 1"></div>
+  <div class="photo-slot"><img src="photos/memory2.jpg" alt="Our memory 2"></div>
+  <div class="photo-slot"><img src="photos/memory3.jpg" alt="Our memory 3"></div>
+  <div class="photo-slot"><img src="photos/memory4.jpg" alt="Our memory 4"></div>
+  <div class="photo-slot"><img src="photos/memory5.jpg" alt="Our memory 5"></div>
+  <div class="photo-slot"><img src="photos/memory6.jpg" alt="Our memory 6"></div>
+
+  <div class="photo-slot"><img src="photos/memory1.jpg" alt="Our memory 1"></div>
+  <div class="photo-slot"><img src="photos/memory2.jpg" alt="Our memory 2"></div>
+  <div class="photo-slot"><img src="photos/memory3.jpg" alt="Our memory 3"></div>
+  <div class="photo-slot"><img src="photos/memory4.jpg" alt="Our memory 4"></div>
+  <div class="photo-slot"><img src="photos/memory5.jpg" alt="Our memory 5"></div>
+  <div class="photo-slot"><img src="photos/memory6.jpg" alt="Our memory 6"></div>
+</div>
+
+  <div class="birthday-copy">
+    09.01.2020 — ♾️
+    <p>Little did I know that day how much you would mean to me🫶🏻</p>
+  </div>
+
+  <button class="primary" id="continueToGift">
+There's more for you babe🤭
+    
+  </button>
+</div>
+<div id="giftOpening" class="hidden">
+        <button class="gift-hero" id="openBirthdayGift" aria-label="Open birthday gift">🎁</button>
+        <h2>There's something for you...</h2>
+        <p>Tap the gift, birthday boy. Don't be shy. 🤭</p>
+        <button class="primary" id="openGiftButton">Open your gift 🎁</button>
+      </div>
+      <div id="birthdayContent" class="hidden">
+        <h1>Happy 30th Birthday, My Baby! ❤️</h1>
+        <div class="scrapbook">
+
+  <p class="birthday-copy">
+    Happy birthday to my favourite person, my biggest headache, and my safest place. You're the person who can irritate me the most and still be the one I want to run to. 🫶🏻
+  </p>
+
+<div class="scrapbook-photo photo-one">
+  <video controls playsinline preload="metadata">
+    <source src="photos/scrapbook1.mp4" type="video/mp4">
+  </video>
+</div>
+
+  <p class="birthday-copy">
+    I wish I could be beside you today, but until I can, I hope this little surprise reminds you how deeply you're loved. ❤️
+  </p>
+
+ <div class="scrapbook-photo photo-two">
+  <img src="photos/scrapbook2.jpg" alt="Our memory">
+</div>
+
+  <p class="birthday-copy">
+    Here's to you, to us, and to all the birthdays we still have to celebrate together.
+  </p>
+
+<div class="scrapbook-photo photo-three">
+  <img src="photos/scrapbook3.jpg" alt="Our memory">
+</div>
+
+  <p class="birthday-copy">
+    Happy birthday, my cutie. I love you more than words could ever explain. 🧿
+  </p>
+
+ <div class="scrapbook-photo photo-four">
+  <video controls playsinline preload="metadata">
+    <source src="photos/scrapbook4.mp4" type="video/mp4">
+  </video>
+</div>
+
+</div>
+        <button class="primary" onclick="goTo(&#39;counterScreen&#39;)">Continue, birthday boy 💗</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="screen" id="counterScreen">
+    <div class="card">
+      <h2>Wondering how long you've been annoying me for?</h2>
+      <p>And somehow, I'd still pick you. Every single time❤️</p>
+      <div class="counter-grid counter-minimal" id="counterGrid">
+  <div class="counter-unit"><strong id="years">6</strong><span>Years</span></div>
+  <div class="counter-unit"><strong id="months">10</strong><span>Months</span></div>
+  <div class="counter-unit"><strong id="weeks">356</strong><span>Weeks</span></div>
+  <div class="counter-unit"><strong id="days">2496</strong><span>Days</span></div>
+  <div class="counter-unit"><strong id="hours">59904</strong><span>Hours</span></div>
+  <div class="counter-unit"><strong id="minutes">3594254</strong><span>Minutes</span></div>
+  <div class="counter-unit"><strong id="seconds">215655243</strong><span>Seconds</span></div>
+</div>
+<button class="primary" onclick="startQuiz()">Well, we've made it this far… let's see how much you've learnt. Time to prove it! 🤭</button>
+     
+    </div>
+  </section>
+
+  <section class="screen hidden" id="quizScreen">
+    <div class="card">
+      <div class="quiz-top"><span id="questionCount">QUESTION 1 / 10</span><span id="scoreCount">SCORE: 0</span></div>
+      <div class="progress"><span id="progressBar"></span></div>
+      <div class="question" id="questionText"></div>
+      <div class="options" id="options"></div>
+      <div id="reaction" class="reaction hidden" aria-live="polite"></div>
+      <div id="retryArea" class="hidden" style="margin-top:14px"><button class="primary" id="retryButton">Try again, sir 😭</button></div>
+      <div id="nextArea" class="hidden" style="margin-top:14px"><button class="primary" id="nextButton">Next question 💗</button></div>
+      <div id="quizPhoto" class="result-photo hidden"></div>
+    </div>
+  </section>
+
+  <section class="screen hidden" id="quizResultScreen">
+    <div class="card pop">
+      <div style="font-size:4rem">🏆💗🎉</div>
+      <div class="eyebrow">Official certificate</div>
+      <h1>10/10</h1>
+      <h2>Congratulations! You're the most obedient boyfriend</h2>
+      <p>Well, you've officially passed the boyfriend test! Looks like you've learnt over the years. 🤭 </p>
+<p> Your reward is continued access to your very cute, very innocent teddy bear. 🤭🧸</p>
+<div class="photo-slot" style="max-width:300px;margin:18px auto">
+  <img src="photos/quiz-result.jpg" alt="Our favourite photo" style="width:100%;height:100%;object-fit:contain;">
+</div>
+      <button class="primary" onclick="goTo(&#39;reasonsScreen&#39;)">But that's not the only reason I love you… ❤️</button>
+    </div>
+  </section>
+
+  <section class="screen hidden" id="reasonsScreen">
+    <div class="card">
+<h2>A few of the infinite reasons I love you ❤️</h2>
+    <button class="giftbox-button" id="reasonGiftButton" aria-label="Open a love note">
+  <span class="jar-note note-one"></span>
+  <span class="jar-note note-two"></span>
+  <span class="jar-note note-three"></span>
+</button>
+      <div id="reasonCard" class="reason-card hidden" aria-live="polite">
+        <div class="reason-number" id="reasonNumber"></div>
+        <div class="reason-text" id="reasonText"></div>
+      </div>
+      <p id="reasonProgress" class="small">Tap the gift to open your first card.</p>
+      <button class="primary hidden" id="nextReasonButton">Another little reason? 💌</button>
+
+    </div>
+  </section>
+
+  <section class="screen hidden" id="letterScreen">
+    <div class="card">
+      <div class="eyebrow">A little piece of my heart</div>
+      <h2>For you, always 💌</h2>
+      <div id="envelopeIntro">
+        <button class="letter-envelope" id="openLetterButton" aria-label="Open love letter">💌</button>
+        <p>You've made it this far, baby. Open your letter. 🥹</p>
+        <button class="primary" id="openLetterButton2">Open my letter ❤️</button>
+      </div>
+      <div id="letterContent" class="letter hidden">Happy 30th Birthday, My Baby! ❤️
+All these years of loving you, annoying you, fighting with you over stupid things, laughing with you, missing you, and somehow finding my way back to you every single time.
+
+And if anybody asked me whether I'd do it all over again, I would. I'd choose you again, even knowing all the difficult days, all the arguments, and all the times distance has made things harder than they needed to be. I'd still choose you.
+
+You're the person I want to tell things to, the person I want to share my happiness with, and the person who somehow manages to annoy me even when you're not physically around.
+
+And Baby, I hope you know that you mean so much more to me than I could ever put into words.
+
+I know I'm not always the easiest person. I get angry, I overthink, I complain, and sometimes I probably make a big deal out of the smallest things. But beneath all of that, there's a girl who loves you so much and who just wants to keep growing with you.
+
+I wish you so much happiness. I hope life gives you all the things you've been working towards, that you achieve everything you've ever dreamed of, and that you always give us reasons to feel proud of you. And whenever life gets difficult, I hope you know that you have someone who believes in you, cares about you, and wants to see you happy.
+
+I don't know exactly what our future will look like or how every little thing will work out. But I know that there are so many more memories I want to make with you, so many more birthdays I want to celebrate with you, and so many more versions of us that I want to meet as we grow older.
+
+Thank you for being a part of my life, for all the memories we've made, for all the laughter, and for being someone I can't imagine my life without.
+
+I love you. Even on the days when I'm angry with you. Even when you're annoying me. Even when we're miles apart and I wish you were here.
+
+I love you baby, always your 🧸❤️</div>
+      <div class="photo-grid hidden" id="letterPhotos">
+        <div class="photo-slot"><img src="photos/letter1.jpg" alt="Our memory 1"></div>
+        <div class="photo-slot"><img src="photos/letter2.jpg" alt="Our memory 2"></div>
+        <div class="photo-slot"><img src="photos/letter3.jpg" alt="Our memory 3"></div>
+        <div class="photo-slot"><img src="photos/letter4.jpg" alt="Our memory 4"></div>
+      </div>
+      <button class="primary hidden" id="toWheelButton" style="margin-top:22px">One final surprise 🎡</button>
+    </div>
+  </section>
+
+  <section class="screen hidden" id="wheelScreen">
+    <div class="card">
+      <div class="eyebrow">The grand finale</div>
+      <h2>Spin for your birthday surprise 🎡</h2>
+      <p>Let's see what your birthday destiny has in store… 🤭</p>
+      <div class="wheel-wrap">
+        <div class="pointer"></div>
+        <div class="wheel" id="wheel">
+<span class="wheel-label" style="transform:rotate(36deg) translate(25px,-8px)">2 WIVES 😂</span>
+<span class="wheel-label" style="transform:rotate(108deg) translate(25px,-8px)">THAILAND TRIP ✈️</span>
+<span class="wheel-label" style="transform:rotate(180deg) translate(25px,-8px)">MASSAGE 💆🏻</span>
+<span class="wheel-label" style="transform:rotate(252deg) translate(25px,-8px)">ADITI MISTRY 👀</span>
+<span class="wheel-label" style="transform:rotate(324deg) translate(25px,-8px)">SURPRISE 🎁</span>
+        </div>
+        <div class="wheel-center"></div>
+      </div>
+      <button class="primary" id="spinButton">SPIN, BABY! 🎡</button>
+<div id="wheelReveal" class="final-reveal hidden">
+  <div style="font-size:3rem">🎁❤️</div>
+  <p>APOLOGIES FOR THE DELAY YOUR SURPRISE WOULD STILL TAKE SOME TIME</p>
+  <div class="big">YOU'LL HAVE TO WAIT A LITTLE LONGER FOR YOUR SURPRISE</div>
+  <p>YOUR TEDDY LOVES YOU MORE THAN YOU KNOW, HAPPY BIRTHDAY BABY❤️</p>
+  <div class="photo-slot" style="max-width:300px;margin:16px auto">
+    <img src="photos/final-surprise.jpg" alt="Our favourite photo" style="width:100%;height:100%;object-fit:contain;">
+  </div>
+
+  <button class="secondary" onclick="celebrate()">One more confetti shower! 🎉</button>
+</div>     
+  </section>
+</main>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const sections = ['passwordScreen','birthdayScreen','counterScreen','quizScreen','quizResultScreen','reasonsScreen','letterScreen','wheelScreen'];
+function goTo(id){
+  sections.forEach(s=>$(s)?.classList.add('hidden'));
+  if(id==='passwordScreen') $('passwordScreen').classList.remove('hidden');
+  else { $('mainSite').classList.remove('hidden'); $(id).classList.remove('hidden'); }
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function confettiBurst(amount=100){
+  const colors=['#ff5e93','#ffd36e','#b7a2ff','#8fe3c2','#ff9c80','#ffffff'];
+  for(let i=0;i<amount;i++){
+    const piece=document.createElement('i');piece.className='confetti';
+    piece.style.left=Math.random()*100+'vw';piece.style.background=colors[Math.floor(Math.random()*colors.length)];
+    piece.style.animationDelay=(Math.random()*.45)+'s';piece.style.animationDuration=(1.5+Math.random()*1.6)+'s';
+    piece.style.transform=`rotate(${Math.random()*360}deg)`;document.body.appendChild(piece);
+    setTimeout(()=>piece.remove(),3600);
+  }
+}
+function celebrate(){confettiBurst(130);playHappySound()}
+function playHappySound(){
+  // A short, cheerful sound made locally with Web Audio; no music or external files required.
+  try{
+    const ctx=new (window.AudioContext||window.webkitAudioContext)();
+    [523.25,659.25,783.99].forEach((freq,i)=>{
+      const osc=ctx.createOscillator(),gain=ctx.createGain();osc.type='sine';osc.frequency.value=freq;
+      gain.gain.setValueAtTime(.0001,ctx.currentTime+i*.11);gain.gain.exponentialRampToValueAtTime(.12,ctx.currentTime+i*.11+.02);
+      gain.gain.exponentialRampToValueAtTime(.0001,ctx.currentTime+i*.11+.22);osc.connect(gain);gain.connect(ctx.destination);
+      osc.start(ctx.currentTime+i*.11);osc.stop(ctx.currentTime+i*.11+.24);
+    });setTimeout(()=>ctx.close(),1000);
+  }catch(e){}
+}
+function playWrongSound(){
+  try{
+    const ctx=new (window.AudioContext||window.webkitAudioContext)();
+    const osc=ctx.createOscillator(),gain=ctx.createGain();osc.type='sawtooth';
+    osc.frequency.setValueAtTime(260,ctx.currentTime);osc.frequency.linearRampToValueAtTime(115,ctx.currentTime+.28);
+    gain.gain.setValueAtTime(.14,ctx.currentTime);gain.gain.exponentialRampToValueAtTime(.001,ctx.currentTime+.32);
+    osc.connect(gain);gain.connect(ctx.destination);osc.start();osc.stop(ctx.currentTime+.33);setTimeout(()=>ctx.close(),500);
+  }catch(e){}
+}
+$('passwordForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  if($('passwordInput').value==='1017'){
+    $('passwordError').textContent='';$('passwordScreen').classList.add('hidden');$('mainSite').classList.remove('hidden');
+    goTo('birthdayScreen'); $('memoryIntro').classList.remove('hidden'); $('giftOpening').classList.add('hidden');
+$('birthdayContent').classList.add('hidden');
+celebrate();
+  }else{
+    $('passwordError').textContent="Oopsie! That's not our little secret🥹";
+    $('passwordInput').value='';$('passwordInput').focus();playWrongSound();
+    $('passwordScreen').querySelector('.card').animate([{transform:'translateX(0)'},{transform:'translateX(-8px)'},{transform:'translateX(8px)'},{transform:'translateX(0)'}],{duration:260});
+  }
+});
+$('openBirthdayGift').addEventListener('click',openBirthday);
+$('openGiftButton').addEventListener('click',openBirthday);
+$('continueToGift').addEventListener('click',()=>{
+  $('memoryIntro').classList.add('hidden');
+  $('birthdayContent').classList.remove('hidden');
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+function openBirthday(){
+  if(!$('birthdayContent').classList.contains('hidden'))return;
+  $('giftOpening').classList.add('hidden');$('birthdayContent').classList.remove('hidden');$('birthdayContent').classList.add('pop');celebrate();
+}
+const startDate=new Date(2020,0,9,0,0,0);
+function updateCounter(){
+  const now=new Date();
+  let y=now.getFullYear()-startDate.getFullYear();
+  let anniversary=new Date(startDate);anniversary.setFullYear(startDate.getFullYear()+y);
+  if(anniversary>now)y--;
+  const lastAnniversary=new Date(startDate);lastAnniversary.setFullYear(startDate.getFullYear()+y);
+  const nextMonth=new Date(lastAnniversary);nextMonth.setMonth(nextMonth.getMonth()+1);
+  let m=(now.getFullYear()-lastAnniversary.getFullYear())*12+now.getMonth()-lastAnniversary.getMonth();
+  if(now.getDate()<lastAnniversary.getDate())m--;
+  const monthAnchor=new Date(lastAnniversary);monthAnchor.setMonth(monthAnchor.getMonth()+Math.max(0,m));
+  const diff=Math.max(0,now-startDate);
+  $('years').textContent=y;
+  $('months').textContent=Math.max(0,m);
+  $('weeks').textContent=Math.floor(diff/(7*24*60*60*1000));
+  $('days').textContent=Math.floor(diff/(24*60*60*1000));
+  $('hours').textContent=Math.floor(diff/(60*60*1000));
+  $('minutes').textContent=Math.floor(diff/(60*1000));
+  $('seconds').textContent=Math.floor(diff/1000);
+}
+updateCounter();setInterval(updateCounter,1000);
+const quiz=[
+{q:'Who is the real boss in this relationship?',opts:['My Baby','Me 😎'],correct:0,replies:['CORRECT ANSWER! 🏆 Finally, a man who knows his place🤭','HOW DARE YOU CHOOSE YOURSELF?! WHO GAVE YOU THIS MUCH CONFIDENCE? 😡']},
+{q:'Who is always right?',opts:['My Cutie, obviously!','Me, obviously! 😌'],correct:0,replies:['CORRECT! LOOK AT YOU LEARNING! 🥹❤️',"EXCUSE ME?! YOU'VE BEEN WITH ME FOR 7 YEARS AND STILL HAVEN'T LEARNED THE RULES? 💀"]},
+{q:'Who apologises first after a fight?',opts:['My Baby','Me 😎'],correct:0,replies:['Ofcourse, PEACEMAKER🤐',"OH REALLY????? DON'T YOU DARE LIE NEXT TIME!"]},
+{q:'Who is more dramatic?',opts:['My baby','Me'],correct:1,replies:["DRAMATIC?! ME?! I'm literally the most peaceful angel on this planet. YOU are the problem, Baby🙂",'FINALLY, SOME HONESTY! 🏆']},
+{q:'Who annoys the other person more?',opts:['My Baby','Me'],correct:1,replies:["ME?! I'm an innocent little angel!👼🏻",'CORRECT! Annoying me is apparently your full-time job🥹']},
+{q:'Who is more likely to start an argument?',opts:['My Baby','Me'],correct:1,replies:["How dare you???? You're lucky this website doesn't have a block button😡",'OFCOURSE!! evidence speaks for itself🤭']},
+{q:"Who's the baby?",opts:['🧸','🐘'],correct:0,replies:['Ofcourse, look at me, I’m the baby, give me puchiiiiii','EXCUSE ME?? YOU’RE A WHOLE ELEPHANT SIR']},
+{q:'After seven years, what do you still want?',opts:['More memories with my Baby ❤️','Peace from my Baby 😂'],correct:0,replies:['Seven years down, forever to go💋','PEACE?! FROM ME?! BABY, YOU’RE IN THE WRONG RELATIONSHIP, THERE IS NO ESCAPE💀']},
+{q:'If your baby was a warning label, what would she say?',opts:['May become emotional without prior notice','Do not argue. She has unlimited evidence','Cute face, dangerous consequences','Certified innocent angel. Never starts fights. Always the peacemaker'],correct:3,replies:['WRONG! She’s literally an angel, go apologise to her😡','WRONG! She’s literally an angel, go apologise to her😡','WRONG! She’s literally an angel, go apologise to her😡','Cute, innocent, and peaceful. Any allegations against her are FAKE NEWS']},
+{q:'Final question: After seven years, who would you choose again?',opts:['My Baby, every single time','Someone less annoying 😂'],correct:0,replies:["Awwwww, IF I COULD CHOOSE AGAIN, I'D STILL CHOOSE YOU IN EVERY LIFETIME🥺",'EXCUSE ME?! YOU THINK YOU HAVE A CHOICE? TOO LATE, SIR😏']}
+];
+let qIndex=0,score=0,answered=false;
+function startQuiz(){qIndex=0;score=0;$('quizResultScreen').classList.add('hidden');goTo('quizScreen');renderQuestion()}
+function renderQuestion(){
+  answered=false;const q=quiz[qIndex];$('questionCount').textContent=`QUESTION ${qIndex+1} / ${quiz.length}`;$('scoreCount').textContent=`SCORE: ${score}`;
+  $('progressBar').style.width=(qIndex/quiz.length*100)+'%';$('questionText').textContent=q.q;$('options').innerHTML='';
+  $('reaction').className='reaction hidden';$('reaction').textContent='';$('retryArea').classList.add('hidden');$('nextArea').classList.add('hidden');$('quizPhoto').classList.add('hidden');
+  q.opts.forEach((opt,i)=>{const b=document.createElement('button');b.className='option';b.textContent=String.fromCharCode(65+i)+'. '+opt;b.addEventListener('click',()=>chooseAnswer(i,b));$('options').appendChild(b)});
+}
+function chooseAnswer(i,button){
+  if(answered)return;const q=quiz[qIndex],reaction=$('reaction');
+  if(i===q.correct){
+    answered=true;score++;$('scoreCount').textContent=`SCORE: ${score}`;$('progressBar').style.width=((qIndex+1)/quiz.length*100)+'%';
+    reaction.className='reaction correct';reaction.textContent=q.replies[i];button.classList.add('correct');$('options').querySelectorAll('button').forEach(b=>b.disabled=true);
+    celebrate();$('nextArea').classList.remove('hidden');$('nextButton').textContent=qIndex===quiz.length-1?'See your results 🏆':'Next question 💗';
+  }else{
+    reaction.className='reaction wrong';reaction.textContent=q.replies[i]||'WRONG ANSWER. TRY AGAIN, SIR. 😭';button.classList.add('wrong');
+    $('options').querySelectorAll('button').forEach(b=>b.disabled=true);$('retryArea').classList.remove('hidden');playWrongSound();
+    document.body.animate([{backgroundColor:'#fff1f3'},{backgroundColor:'#ffdfe5'},{backgroundColor:'#fff1f3'}],{duration:380});
+  }
+}
+$('retryButton').addEventListener('click',renderQuestion);
+$('nextButton').addEventListener('click',()=>{
+  if(qIndex<quiz.length-1){qIndex++;renderQuestion()}
+  else{$('mainSite').classList.remove('hidden');sections.forEach(s=>$(s)?.classList.add('hidden'));$('quizResultScreen').classList.remove('hidden');$('scoreCount').textContent='SCORE: 10';confettiBurst(150)}
+});
+const reasons=[
+'Because you’re MY baby, Even if you’re a whole elephant, you’ll always be my little baby 🐘',
+'Because annoying me is apparently your full time job 🤡',
+'Because you put up with me. Honestly, baby, you deserve a medal🤭',
+'Because you’re my favourite person to bother🤏🏻',
+'Because you make me smile without even trying🥹',
+'Because I can be myself around you😂',
+'Because even after all these years, you’re still my fav person🫶🏻',
+'Because if I had to choose all over again, I’d still choose you. Even knowing how annoying you’re going to be, every single time❤️'
+];
+let reasonIndex=0;
+
+function showReason(){
+  if(reasonIndex>=reasons.length)return;
+
+  $('reasonCard').classList.remove('hidden');
+  $('reasonCard').classList.remove('pop');
+  void $('reasonCard').offsetWidth;
+  $('reasonCard').classList.add('pop');
+
+  $('reasonText').textContent=reasons[reasonIndex];
+  reasonIndex++;
+
+  if(reasonIndex===1){
+    $('nextReasonButton').classList.remove('hidden');
+$('reasonGiftButton').classList.add('hidden');
+  }
+}
+
+$('reasonGiftButton').addEventListener('click',showReason);
+
+$('nextReasonButton').addEventListener('click',()=>{
+  if(reasonIndex<reasons.length){
+    showReason();
+  }else{
+    goTo('letterScreen');
+    openLetter();
+  }
+});
+function openLetter(){
+  $('envelopeIntro').classList.add('hidden');$('letterContent').classList.remove('hidden');$('letterContent').classList.add('pop');$('letterPhotos').classList.remove('hidden');$('toWheelButton').classList.remove('hidden');celebrate();
+}
+$('openLetterButton').addEventListener('click',openLetter);$('openLetterButton2').addEventListener('click',openLetter);
+$('toWheelButton').addEventListener('click',()=>goTo('wheelScreen'));
+let spun=false;
+$('spinButton').addEventListener('click',()=>{
+  if(spun)return;spun=true;$('spinButton').disabled=true;$('spinButton').textContent='DESTINY IS DECIDING…';
+  // Fixed result: the top pointer lands in the centre of the "Secret surprise" segment.
+  // The 30 gifts segment is the final 72-degree slice (288°–360°);
+  // rotating the wheel clockwise by 36° aligns its centre with the top pointer.
+  $('wheel').style.transform='rotate(0deg)';
+  requestAnimationFrame(() => {
+    $('wheel').style.transform='rotate(3564deg)';
+  });
+  setTimeout(()=>{$('wheelReveal').classList.remove('hidden');$('wheelReveal').classList.add('pop');$('spinButton').textContent='DESTINY HAS SPOKEN 💗';celebrate();},4100);
+});
+(function makeFloaties(){
+  const icons=['♡','♥','✧','✨','🩷'];
+  for(let i=0;i<18;i++){const el=document.createElement('span');el.className='floaty';el.textContent=icons[i%icons.length];el.style.left=Math.random()*100+'%';el.style.animationDuration=(9+Math.random()*12)+'s';el.style.animationDelay=(-Math.random()*15)+'s';el.style.fontSize=(12+Math.random()*20)+'px';$('floaties').appendChild(el)}
+})();
+
+</script>
+</body></html>
